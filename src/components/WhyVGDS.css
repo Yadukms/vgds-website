@@ -1,0 +1,178 @@
+/* ==============================
+   WHY VGDS SECTION
+================================ */
+.why {
+  background: #ffffff;
+  padding: 120px 0;
+}
+
+.why-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 160px;
+}
+
+/* ==============================
+   HEADER
+================================ */
+.why-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 80px;
+}
+
+.why-header h2 {
+  font-family: "DM Sans";
+  font-size: 56px;
+  font-weight: 600;
+  color: #151515;
+  margin: 0;
+}
+
+.why-link {
+  font-family: "DM Sans";
+  font-size: 16px;
+  color: #151515;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* ==============================
+   CONTENT LAYOUT
+================================ */
+.why-content {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 120px;
+  align-items: flex-start;
+}
+
+/* ==============================
+   LEFT LIST
+================================ */
+.why-left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Button reset */
+.why-item {
+  background: none;
+  border: none;
+  padding: 28px 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Title */
+.why-item h3 {
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-weight: 400;
+  color: #9a9a9a;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+/* Active title */
+.why-item.active h3 {
+  color: #151515;
+  font-weight: 500;
+}
+
+/* Description (active only) */
+.why-item p {
+  font-family: "DM Sans";
+  font-size: 16px;
+  line-height: 26px;
+  color: #151515;
+  max-width: 520px;
+  margin: 16px 0 0;
+}
+
+/* ==============================
+   DIVIDER (OG LOGIC)
+================================ */
+.divider {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+  margin-top: 28px;
+  overflow: hidden;
+}
+
+/* Blue progress line */
+.divider.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 40%;
+  background: #1e6fff;
+}
+
+/* ==============================
+   RIGHT SIDE (LOTTIE)
+================================ */
+.why-right {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-right > div {
+  width: 100%;
+  height: 100%;
+}
+
+/* ==============================
+   MOBILE
+================================ */
+@media (max-width: 768px) {
+
+  .why {
+    padding: 80px 0;
+  }
+
+  .why-inner {
+    padding: 0 20px;
+  }
+
+  .why-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+
+  .why-header h2 {
+    font-size: 40px;
+  }
+
+  .why-content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .why-item {
+    padding: 24px 0;
+  }
+
+  .why-item h3 {
+    font-size: 22px;
+  }
+
+  .why-item p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .why-right {
+    min-height: 260px;
+  }
+}

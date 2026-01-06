@@ -1,0 +1,97 @@
+.process {
+  padding: 140px 0;
+  background: #fff;
+}
+
+.process-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 120px;
+}
+
+.process-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* LINE */
+.process-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #e5e5e5;
+  transform: translateX(-50%);
+}
+
+/* MOVING DOT */
+.process-dot {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background: #1e6fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 18px rgba(30, 111, 255, 0.18);
+  transition: top 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 5;
+}
+
+/* CHECKPOINTS */
+.process-checkpoint {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border: 2px solid #1e6fff;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* STEPS */
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+}
+
+.process-step {
+  width: 50%;
+}
+
+.process-step.left {
+  text-align: right;
+  padding-right: 80px;
+}
+
+.process-step.right {
+  margin-left: auto;
+  text-align: left;
+  padding-left: 80px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .process-title {
+    font-size: 36px;
+    margin-bottom: 80px;
+  }
+
+  .process-step {
+    width: 100%;
+  }
+
+  .process-step.left {
+    padding-right: 56%;
+    text-align: right;
+  }
+
+  .process-step.right {
+    padding-left: 56%;
+    text-align: left;
+  }
+}

@@ -1,0 +1,180 @@
+/* ==============================
+   FAQ SECTION
+================================ */
+.faq {
+  background: #eaf6ff;
+  padding: 120px 0;
+}
+
+.faq-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 160px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 120px;
+  align-items: flex-start;
+}
+
+/* ==============================
+   TITLE
+================================ */
+.faq-title h2 {
+font-family: "DM Sans";
+font-size: 48px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+  color: #151515;
+  margin: 0;
+}
+
+/* ==============================
+   FAQ LIST
+================================ */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ==============================
+   FAQ ITEM
+================================ */
+.faq-item {
+  border: 2px solid #9fa8b0;
+  border-radius: 14px;
+  background: transparent;
+  overflow: hidden;
+  width: 560px;
+  /* padding-left: 40px; */
+}
+
+/* QUESTION ROW */
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  /* font-family: "DM Sans";
+  font-size: 16px;
+  font-weight: 600;
+  color: #151515;
+  text-align: left;
+  color: #161616; */
+
+font-family: "DM Sans";
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+/* ICON */
+.faq-question .icon {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+/* ANSWER */
+.faq-answer {
+  padding: 0 24px 20px;
+}
+
+.faq-answer p {
+  font-family: "DM Sans";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #151515;
+  margin: 0;
+}
+
+/* ==============================
+   LOAD MORE (VISUAL ONLY)
+================================ */
+.faq-load-more {
+  margin-top: 32px;
+  font-family: "DM Sans";
+  font-size: 16px;
+  color: #151515;
+  cursor: default;
+  text-align: center;
+}
+
+/* ==============================
+   MOBILE
+================================ */
+@media (max-width: 768px)  {
+
+  /* Section spacing */
+  .faq {
+    padding: 64px 0 72px;
+  }
+
+  .faq-inner {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+    gap: 28px;
+  }
+
+  /* Title */
+  .faq-title h2 {
+    font-size: 34px;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+
+  /* FAQ card */
+  .faq-item {
+    width: 100%;
+    border: 1.2px solid #9fa8b0;   /* OG thinner stroke */
+    border-radius: 14px;
+    background: transparent;
+    overflow: hidden;
+  }
+
+  /* Question row */
+  .faq-question {
+    padding: 16px 18px;           /* OG tighter padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: "DM Sans";
+    font-size: 15px;              /* OG size */
+    font-weight: 700;
+    line-height: 1.25;            /* OG wrap behavior */
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  /* + / − icon */
+  .faq-icon {
+    font-size: 18px;
+    line-height: 1;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  /* Answer (when opened) */
+  .faq-answer {
+    padding: 0 18px 14px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  /* Load more */
+  .faq-load {
+    margin-top: 22px;
+    font-size: 14.5px;
+    text-align: center;
+  }
+}

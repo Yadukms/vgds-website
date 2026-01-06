@@ -1,0 +1,91 @@
+/* ===== BASE ===== */
+.quote {
+  background: #e9f6ff;
+  padding: 120px 0;
+}
+
+.quote-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* ===== TEXT ===== */
+.quote-text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+  color: #000;
+  max-width: 980px;
+  margin: 0 auto 48px;
+  font-weight: 400;
+}
+
+.quote-text strong {
+  font-weight: 700;
+}
+
+/* ===== AUTHOR ===== */
+.quote-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.quote-author img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-text {
+  text-align: left;
+}
+
+.author-name {
+  font-family: "DM Sans";
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+.author-role {
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-style: italic;
+  color: #555;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .quote {
+    padding: 80px 0;
+  }
+
+  .quote-text {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 32px;
+  }
+
+  .quote-author {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .quote-author img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .author-name {
+    font-size: 16px;
+  }
+
+  .author-role {
+    font-size: 13px;
+  }
+}

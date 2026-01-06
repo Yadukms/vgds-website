@@ -1,0 +1,95 @@
+/* ================= SECTION ================= */
+.stats {
+  background: #ffffff;
+}
+
+/* ================= INNER WRAPPER ================= */
+.stats-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 100px;
+}
+
+/* ================= TITLE ================= */
+.stats-title {
+  color: #161616;
+  font-family: "DM Sans", sans-serif;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 72px;
+  letter-spacing: -1.12px;
+  margin-bottom: 96px;
+  text-align: left;
+}
+
+/* ================= GRID (DESKTOP) ================= */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+}
+
+/* ================= STAT ================= */
+.stat {
+  text-align: left;
+  position: relative;
+  width: 100%;
+}
+
+.stat h3 {
+  font-size: 60px;
+  font-weight: 600;
+  color: #003b63;
+  margin-bottom: 8px;
+}
+
+.stat p {
+  font-size: 16px;
+  color: #000000;
+}
+
+/* ================= DESKTOP DIVIDERS ================= */
+@media (min-width: 769px) {
+  .stat:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 90px;
+    width: 1px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .stats-inner {
+    padding: 80px 20px;
+  }
+
+  .stats-title {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 48px;
+  }
+
+  /* 🔑 CRITICAL FIX: 2 x 2 GRID */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 48px;
+    column-gap: 24px;
+  }
+
+  .stat h3 {
+    font-size: 36px;
+  }
+
+  .stat p {
+    font-size: 14px;
+  }
+
+  /* REMOVE DIVIDERS IN MOBILE */
+  .stat::after {
+    display: none;
+  }
+}
