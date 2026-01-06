@@ -1,28 +1,28 @@
-import Header from "./components/Header/Header.jsx";
-import Hero from "./components/Hero/Hero.jsx";
-import Stats from "./components/Stats.jsx";
-import Solutions from "./components/Solutions.jsx";
-import AboutSection from "./components/AboutSection.jsx";
-import QuoteSection from "./components/QuoteSection.jsx";
-import ServicesSection from "./components/ServicesSection.jsx";
-import WhyVGDS from "./components/WhyVGDS.jsx";
-import FAQSection from "./components/FAQSection.jsx";
-import OurProcess from "./components/OurProcess.jsx";
-import Footer from "./components/Footer.jsx";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import Stats from "./components/stats";
+import Solutions from "./components/Solutions";
+import AboutSection from "./components/AboutSection";
+import QuoteSection from "./components/QuoteSection";
+import ServicesSection from "./components/ServicesSection";
+import WhyVGDS from "./components/WhyVGDS";
+import FAQSection from "./components/FAQSection";
+import OurProcess from "./components/OurProcess";
+import Footer from "./components/Footer";
 function App() {
   return (
       <>
-      <Header.jsx />
-      <Hero.jsx/>
-      <Stats.jsx/>
-      <Solutions.jsx/>
-      <AboutSection.jsx/>
-      <QuoteSection.jsx/>
-      <ServicesSection.jsx/>
-      <WhyVGDS.jsx/>
-      <FAQSection.jsx/>
-      <OurProcess.jsx/>
-      <Footer.jsx/>
+      <Header />
+      <Hero/>
+      <Stats/>
+      <Solutions/>
+      <AboutSection/>
+      <QuoteSection/>
+      <ServicesSection/>
+      <WhyVGDS/>
+      <FAQSection/>
+      <OurProcess/>
+      <Footer/>
     </>
 
   )
