@@ -1,6 +1,6 @@
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import Stats from "./components/stats";
+import Stats from "./components/Stats";
 import Solutions from "./components/Solutions";
 import AboutSection from "./components/AboutSection";
 import QuoteSection from "./components/QuoteSection";
