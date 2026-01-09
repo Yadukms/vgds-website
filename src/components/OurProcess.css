@@ -38,6 +38,8 @@
   box-shadow: 0 0 0 18px rgba(30, 111, 255, 0.18);
   transition: top 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 5;
+    transition: top 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: top;
 }
 
 /* CHECKPOINTS */
@@ -93,5 +95,15 @@
   .process-step.right {
     padding-left: 56%;
     text-align: left;
+  }
+    .process-wrapper {
+    position: relative;
+  }
+
+  .process-line {
+    left: 50%;
+    top: 0;
+    bottom: auto;
+    height: 100%;
   }
 }

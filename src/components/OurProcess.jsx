@@ -58,27 +58,73 @@ export default function OurProcess() {
   }, []);
 
   /* Scroll logic */
-  useEffect(() => {
-    const onScroll = () => {
-      const mid = window.scrollY + window.innerHeight / 2;
+  // useEffect(() => {
+  //   const onScroll = () => {
+  //     const mid = window.scrollY + window.innerHeight / 2;
 
-      stepRefs.current.forEach((step, index) => {
-        if (!step) return;
-        const rect = step.getBoundingClientRect();
-        const top = rect.top + window.scrollY;
-        const bottom = top + rect.height;
+  //     stepRefs.current.forEach((step, index) => {
+  //       if (!step) return;
+  //       const rect = step.getBoundingClientRect();
+  //       const top = rect.top + window.scrollY;
+  //       const bottom = top + rect.height;
 
-        if (mid >= top && mid <= bottom) {
-          setActiveIndex(index);
-        }
-      });
-    };
+  //       if (mid >= top && mid <= bottom) {
+  //         setActiveIndex(index);
+  //       }
+  //     });
+  //   };
 
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
+  //   window.addEventListener("scroll", onScroll, { passive: true });
+  //   onScroll();
 
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  //   return () => window.removeEventListener("scroll", onScroll);
+  // }, []);
+useEffect(() => {
+  const onScroll = () => {
+    if (!wrapperRef.current || stepTops.length === 0) return;
+
+    const section = wrapperRef.current;
+    const rect = section.getBoundingClientRect();
+    
+    // 1. Detect if we are above or below the section to set initial dot position
+    if (rect.top > window.innerHeight) {
+      setActiveIndex(0); // Above section: dot at top
+      return;
+    }
+    if (rect.bottom < 0) {
+      setActiveIndex(STEPS.length - 1); // Below section: dot at bottom
+      return;
+    }
+
+    // 2. Trigger point (30% from top of screen) for active step
+    const triggerPoint = window.innerHeight * 0.3;
+    
+    let newIndex = 0;
+    stepRefs.current.forEach((step, index) => {
+      if (!step) return;
+      const stepRect = step.getBoundingClientRect();
+      
+      // If the top of the step has crossed our trigger line, it becomes active
+      if (stepRect.top < triggerPoint) {
+        newIndex = index;
+      }
+    });
+
+    setActiveIndex(newIndex);
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll(); // Run immediately on mount
+
+  return () => window.removeEventListener("scroll", onScroll);
+}, [stepTops]);
+
+
+
+
+
+
+
 
 
 
