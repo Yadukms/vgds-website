@@ -1,0 +1,102 @@
+.ourwork {
+  background: #fff;
+}
+
+/* HERO */
+.ourwork-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 140px 100px;
+  background: radial-gradient(circle at top, #0c2d6b, #061b44);
+  color: #fff;
+}
+
+.ourwork-hero-content {
+  max-width: 600px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.ourwork-hero h1 {
+  font-size: 56px;
+  line-height: 1.2;
+  margin: 24px 0;
+}
+
+.ourwork-hero p {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.ourwork-hero-image img {
+  max-width: 420px;
+}
+
+/* GALLERY */
+.ourwork-gallery {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 60px;
+  padding: 100px;
+}
+
+.ourwork-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ourwork-filters button {
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ourwork-filters .active {
+  background: #0b6bff;
+  color: #fff;
+  border-color: #0b6bff;
+}
+
+/* GRID */
+.ourwork-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.work-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.work-card p {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .ourwork-hero {
+    flex-direction: column;
+    padding: 80px 20px;
+    text-align: left;
+  }
+
+  .ourwork-gallery {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+  }
+
+  .ourwork-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+ import { Link } from "react-router-dom";
+
+ import { useEffect, useState } from "react";
 import "./Header.css";
 
 function Header() {
@@ -34,7 +36,7 @@ function Header() {
 
         {/* ================= DESKTOP NAV ================= */}
         <nav className="nav">
-          <a href="#work">Our Work</a>
+         <Link to="/our-work">Our Work</Link>
 
           {/* SERVICES */}
           <div
@@ -42,7 +44,10 @@ function Header() {
             onMouseEnter={() => !isMobile && setServicesOpen(true)}
             onMouseLeave={() => !isMobile && setServicesOpen(false)}
           >
-            <span className="nav-link">Services</span>
+            <Link to="/services" className="nav-link">
+  Services
+</Link>
+
 
             {/* DESKTOP MEGA MENU */}
             {servicesOpen && !isMobile && (
@@ -117,7 +122,10 @@ function Header() {
             </button>
           </div>
 
-          <a href="#work">Our Work</a>
+          {/* <a href="#work">Our Work</a> */}
+          <Link to="/our-work" onClick={() => setMenuOpen(false)}>
+  Our Work
+</Link>
 
           {/* MOBILE SERVICES */}
           <div className="mobile-services">
